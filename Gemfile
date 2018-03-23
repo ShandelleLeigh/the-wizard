@@ -13,7 +13,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -26,6 +26,8 @@ gem 'puma', '~> 3.7'
 # gem 'rack-cors'
 
 gem 'aws-sdk'
+gem 'kaminari'
+
 gem 'omniauth'
 gem 'devise'
 gem 'devise_token_auth'
@@ -35,6 +37,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'faker'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

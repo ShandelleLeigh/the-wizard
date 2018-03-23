@@ -11,9 +11,9 @@ const logout = () => {
   return { type: 'LOGOUT' };
 };
 
-export const registerUser = ( name, email, gamertag, password, passwordConfirmation, history) => {
+export const registerUser = (name, gamertag, email, password, passwordConfirmation, history) => {
   return dispatch => {
-    axios.post('/api/auth', {  name, email, gamertag, password, password_confirmation: passwordConfirmation })
+    axios.post('/api/auth', { gamertag, name, email, password, password_confirmation: passwordConfirmation })
       .then(res => {
         const { data: { data: user }, headers } = res;
         dispatch(setHeaders(headers));
